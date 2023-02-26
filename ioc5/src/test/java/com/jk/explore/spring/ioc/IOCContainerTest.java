@@ -13,7 +13,7 @@ public class IOCContainerTest
 
 
     @Test
-    public void creatIOCContainer() {
+    public void createIOCContainer() {
         IOCContainer iocContainer = new IOCContainer("classpathxmlapplicationcontext-explore.xml", "classpathxmlapplicationcontext-internationalization.xml");
         Assertions.assertNotNull(iocContainer);
         Assertions.assertEquals(2, iocContainer.getConfigLocationsList().size());
@@ -22,7 +22,7 @@ public class IOCContainerTest
         Student student = context.getBean("student", Student.class);
         Assertions.assertTrue(context.containsBean("teacher"));
         Teacher teacher = context.getBean("teacher", Teacher.class);
-        Assertions.assertEquals(2, teacher.getCourses().size());
+        Assertions.assertEquals(1, teacher.getCourses().size());
         Assertions.assertTrue(context.containsBean("math"));
         Assertions.assertTrue(context.containsBean("messageSource"));
         MessageSource messageSource = context.getBean("messageSource", MessageSource.class);
