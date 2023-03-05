@@ -22,6 +22,7 @@
         <module>ioc5</module>
         <module>properties/PropertySourceEx1</module>
         <module>properties/PropertySources_Ex1</module>
+        <module>ioc/xml/simple</module>
     </modules>
 
 </project>
