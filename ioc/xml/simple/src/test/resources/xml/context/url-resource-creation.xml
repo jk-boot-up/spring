@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="googleUrlResource" class="org.springframework.core.io.UrlResource">
+        <constructor-arg index="0" ref="googleHomePageUrl">
+        </constructor-arg>
+    </bean>
+
+<!-- This will work but with warnings for name attribute -->
+<!--    <bean id="googleHomePageUrl" class="java.net.URL">-->
+<!--        <constructor-arg name="protocol" value="https" />-->
+<!--        <constructor-arg name="host" value="google.com" />-->
+<!--        <constructor-arg name="file" value=""/>-->
+<!--    </bean>-->
+
+    <bean id="googleHomePageUrl" class="java.net.URL">
+        <constructor-arg index="0" value="https" />
+        <constructor-arg index="1" value="google.com" />
+        <constructor-arg index="2" value=""/>
+    </bean>
+
+</beans>
